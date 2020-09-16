@@ -1,0 +1,32 @@
+<%= form_tag(coupons_path) do %>
+    <%= label_tag('coupon[coupon_code]', "Coupon Code") %> <!-- label_tag('model[column]', "Label Name") = <label></label> -->
+    <%= text_field_tag('coupon[coupon_code]') %> <!-- text_field_tag('model[column]') = <input id="" -->
+    <br>
+    <%= label_tag('coupon[store]', "Store") %>
+    <%= text_field_tag('coupon[store]') %>
+    <br>
+    <%= submit_tag "Create Coupon" %>
+<% end %>
+
+
+
+
+<!-- This:
+    <%= form_tag("/cats") do %>
+    <%= label_tag('cat[name]', "Name") %>
+    <%= text_field_tag('cat[name]') %>
+  
+    <%= label_tag('cat[color]', "Color") %>
+    <%= text_field_tag('cat[color]') %>
+  
+    <%= submit_tag "Create Cat" %>
+  <% end %> -->
+
+<!-- Is Also This:
+  <form accept-charset="UTF-8" action="/cats" method="POST">
+  <label for="cat_name">Name</label>
+  <input id="cat_name" name="cat[name]" type="text">
+  <label for="cat_color">Color</label>
+  <input id="cat_color" name="cat[color]" type="text">
+  <input name="commit" type="submit" value="Create Cat">
+</form> -->
